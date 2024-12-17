@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <div class="login-container animate__bounceIn">
+        <h2>Registro</h2>
+        <form id="registroForm">
+            <div class="form-group">
+                <label for="nuevoUsuario">Nombre de Usuario</label>
+                <input 
+                    type="text" 
+                    id="nuevoUsuario" 
+                    required 
+                    minlength="3" 
+                    maxlength="20"
+                    pattern="[a-zA-Z0-9_]+"
+                    title="Solo se permiten letras, números y guiones bajos"
+                >
+            </div>
+            <div class="form-group">
+                <label for="nuevaContrasena">Contraseña</label>
+                <input 
+                    type="password" 
+                    id="nuevaContrasena" 
+                    required 
+                    minlength="6"
+                    maxlength="20"
+                >
+                <small style="color: rgb(188, 188, 188);">Debe tener entre 6 y 20 caracteres. Incluye mayúsculas, números y símbolos para mayor seguridad.</small>
+            </div>
+            <div class="form-group">
+                <label for="confirmarContrasena">Confirmar contraseña</label>
+                <input 
+                    type="password" 
+                    id="confirmarContrasena" 
+                    required 
+                    minlength="8"
+                >
+            </div>
+            <button type="submit" class="btn">Registrarse</button>
+            <button type="button" class="btnRegistro" onclick="window.location.href='login.html'">Volver al Login</button>
+            <div id="mensaje" class="mensaje"></div>
+        </form>
+    </div>
+
+    <script src="js/registro.js"></script>
+</body>
+</html>
